@@ -1,0 +1,30 @@
+﻿EventHandler
+	onsetKeyBindState
+		keybinding.h() => keybinding.getDescription()
+		player.a() => player.rayTrace()
+		
+	onBlockRightClick
+		player.l => player.wordObj
+		
+		
+.util.Items
+	all static fields
+	
+.util.Log
+	logChat
+		txt.a() => txt.append()
+		
+	infoChat
+		txt.a() => txt.append()
+		
+.util.Util
+	getPlayerController
+		Minecraft.class.getField("c"); => c : playerController
+	
+	rightClickBlock
+		Class.forName("bkq"); => bkq : PlayerControllerMP
+		getMethod("a",......) => a: processRightClickBlock()
+	
+	playerBlockReachDistance
+		Class.forName("bkq"); => bkq : PlayerControllerMP
+		getMethod("d"); => d : getBlockReachDistance()
