@@ -16,15 +16,3 @@
 		
 	infoChat
 		txt.a() => txt.append()
-		
-.util.Util
-	getPlayerController
-		Minecraft.class.getField("c"); => c : playerController
-	
-	rightClickBlock
-		Class.forName("bkq"); => bkq : PlayerControllerMP
-		getMethod("a",......) => a: processRightClickBlock()
-	
-	playerBlockReachDistance
-		Class.forName("bkq"); => bkq : PlayerControllerMP
-		getMethod("d"); => d : getBlockReachDistance()

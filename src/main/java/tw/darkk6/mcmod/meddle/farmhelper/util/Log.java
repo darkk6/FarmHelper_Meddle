@@ -6,6 +6,8 @@ import net.minecraft.util.ChatComponentText;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import tw.darkk6.meddle.api.util.APILog;
+
 public class Log {
 	private static Logger log=LogManager.getLogger(Reference.LOG_TAG);
 	
@@ -20,8 +22,8 @@ public class Log {
 	
 	public static void logChat(String msg){
 		try{
-			ChatComponentText txt=new ChatComponentText(TextFormatting.RED+"["+Reference.LOG_TAG+"] ");
-			txt.a(TextFormatting.RESET+msg);
+			ChatComponentText txt=new ChatComponentText(APILog.TextFormatting.RED+"["+Reference.LOG_TAG+"] ");
+			txt.a(APILog.TextFormatting.RESET+msg);
 			Minecraft.getMinecraft().thePlayer.addChatMessage(txt);
 		}catch(Exception e){
 			Log.info(msg);
@@ -30,8 +32,8 @@ public class Log {
 	
 	public static void infoChat(String msg){
 		try{
-			ChatComponentText txt=new ChatComponentText(TextFormatting.GOLD+"["+Reference.LOG_TAG+"] ");
-			txt.a(TextFormatting.RESET+msg);
+			ChatComponentText txt=new ChatComponentText(APILog.TextFormatting.GOLD+"["+Reference.LOG_TAG+"] ");
+			txt.a(APILog.TextFormatting.RESET+msg);
 			Minecraft.getMinecraft().thePlayer.addChatMessage(txt);
 		}catch(Exception e){
 			Log.info(msg);
